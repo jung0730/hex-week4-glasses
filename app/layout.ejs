@@ -10,14 +10,63 @@
 </head>
 
 <body>
-  <header class="header">
-    這是 header
-  </header>
+  <nav class="home-nav">
+    <div class="container home-nav-container">
+      <h1>
+        <a href="#">眼鏡官網</a>
+      </h1>
+      <a href="javascript:void(0);" class="home-nav-hamburger" onclick="toggleNav()">
+        <img src="./assets/images/menu.png">
+      </a>
+      <ul>
+        <li><a href="classic.html">系列鏡框</a></li>
+        <li><a href="store.html">門市據點</a></li>
+        <li><a href="#">部落格</a></li>
+        <li><a href="#">常見問題</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <%- contents %>
 
-  <footer class="footer">
-    footer
+  <footer>
+    <div class="container">
+      <div class="footer-info">
+        <div>
+          <ul class="footer-info-nav">
+            <li><a href="#">首頁</a></li>
+            <li><a href="#">系列鏡框</a></li>
+            <li><a href="#">門市據點</a></li>
+            <li><a href="#">部落格</a></li>
+            <li><a href="#">常見問題</a></li>
+          </ul>
+          <ul class="footer-info-contact">
+            <li>
+              <img src="./assets/images/phone.png">
+              <a href="tel:+0800-000-00">0800-000-00</a>
+            </li>
+            <li>
+              <img src="./assets/images/email-outline.png" alt="">
+              <a href="mailto:glasses@business.co">glasses@business.co</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-info-media">
+            <li><a href="#"><img src="./assets/images/ic-social-fb.png"></a></li>
+            <li><a href="#"><img src="./assets/images/ic_social_ig.png"></a></li>
+            <li><a href="#"><img src="./assets/images/ic_social_line.png"></a></li>
+        </ul>
+      </div>
+      <div class="footer-copyright">
+        <p>Copyright © 2020 Glasses.All rights reserved.</p>
+        <div class="footer-copyright-more">
+          <ul>
+            <li><a href="#">隱私權政策</a></li>
+            <li><a href="#">服務條款</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
