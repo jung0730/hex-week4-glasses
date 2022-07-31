@@ -1,0 +1,47 @@
+$tablet: 768px;
+$mobile: 576px;
+
+@mixin tablet {
+  @media(max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media(max-width: $mobile) {
+		@content;
+	}
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 12px;
+	@include tablet {
+		max-width: 720px;
+	}
+	@include mobile {
+		max-width: 375px;
+	}
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 72px;
+	font-weight: 700;
+	@include mobile {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+h3 {
+	color: var(--brown);
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 700;
+	@include mobile {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}

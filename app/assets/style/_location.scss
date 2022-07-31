@@ -1,0 +1,48 @@
+.store-location {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	@include tablet {
+		row-gap: 24px;
+	}
+}
+
+.store-location-info {
+	flex-basis: 35%;
+	@include tablet {
+		flex-basis: 100%;
+		display: flex;
+		column-gap: 24px;
+	}
+	@include mobile {
+		flex-direction: column;
+	}
+}
+
+.store-location h4 {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	border-bottom: 1px solid #DCDCDC;
+}
+
+.store-location-container {
+	border: 1px solid #DCDCDC;
+	@include tablet {
+		flex-basis: calc((100% - 24px) / 2);
+	}
+}
+
+.store-location-map {
+	flex: 1;
+	@include tablet {
+		flex-basis: 100%;
+	}
+}
+
+.store-location-img {
+	@include tablet {
+		width: 340px;
+		flex-basis: calc((100% - 24px) / 2);
+	}
+}

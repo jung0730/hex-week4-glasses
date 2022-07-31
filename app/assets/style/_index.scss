@@ -1,0 +1,260 @@
+.home-header {
+	background-image: url("../images/home-header.png");
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	@include mobile {
+		height: 50vh;
+		background-image: url("../images/home-header-sm.png");
+	}
+}
+
+.home-header h2 {
+	color: var(--brown);
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 700;
+	@include mobile {
+		font-size: 24px;
+		line-height: 36px;
+	}
+}
+
+.home-header span {
+	display: block;
+	color: var(--brown);
+	font-size: 36px;
+	line-height: 54px;
+	font-weight: 400;
+	@include mobile {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.home-header-container {
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+	align-items: center;
+	height: 100%;
+}
+
+.home-header button {
+	padding: 6px 12px;
+	cursor: pointer;
+	color: var(--white);
+	background-color: var(--red);
+	box-shadow: none;
+	border: none;
+}
+
+.home-classic {
+	text-align: center;
+	padding-bottom: 80px;
+}
+
+.home-advantage, .home-brand {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin-bottom: 80px;
+	text-align: center;
+	@include mobile {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+	}
+}
+
+.home-advantage {
+	background-color: var(--beige);
+}
+
+.home-advantage h3 {
+	margin-bottom: 8px;
+}
+
+.home-advantage p {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.home-advantage h2, .home-classic h2:first-child, .home-recommendation h2, .home-contact h2 {
+	color: var(--brown);
+	margin-bottom: 32px;
+}
+
+.home-advantage ul, .home-classic ul, .home-brand ul, .home-recommendation ul {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	@include tablet {
+		row-gap: 24px;
+	}
+}
+
+.home-advantage li, .home-recommendation li {
+	flex: 1;
+	@include tablet {
+		flex-basis: calc((100% - 24px) / 2);
+	}
+	@include mobile {
+		flex-basis: 100%;
+	}
+}
+
+.home-classic li, .home-brand li {
+	flex: 1;
+	@include tablet {
+		flex-basis: 100%;
+	}
+}
+
+.home-advantage img {
+	width: 84px;
+	margin-bottom: 24px;
+}
+
+.home-advantage h4, .home-recommendation h5, .home-contact-input label, .footer-info-contact {
+	margin-bottom: 8px;
+}
+
+.home-classic :not(:first-child) {
+	color: var(--red);
+}
+
+.home-brand {
+	background-image: url("../images/index-bg.png");
+	@include tablet {
+		background-image: url("../images/index-bg-md.png");
+	}
+	@include mobile {
+		background-image: url("../images/index-bg-sm.png");
+	}
+}
+
+.home-brand h2:not(:first-child) {
+	color: var(--red);
+	background-color: var(--white);
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.home-brand h2:first-child {
+	margin-bottom: 32px;
+	color: var(--white);
+}
+
+.home-recommendation {
+	padding-bottom: 80px;
+}
+
+.home-recommendation h2 {
+	text-align: center;
+}
+
+.home-recommendation li {
+	box-shadow: 0px 2px 6px #00000029;
+	border: 1px solid #DEE2E6;
+	border-radius: 4px;
+}
+
+.home-recommendation img {
+	margin-bottom: 16px;
+}
+
+.home-customer {
+	margin-right: 16px;
+	margin-left: 16px;
+}
+
+.home-customer p:first-child {
+	margin-bottom: 8px;
+}
+
+.home-customer p:not(:last-child) {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+.home-customer p:last-child {
+	font-size: 14px;
+	line-height: 21px;
+	color: #707070;
+	margin-top: 72px;
+	margin-bottom: 16px;
+}
+
+
+.home-contact-container {
+	max-width: 636px;
+	margin: 0 auto;
+	padding: 0 12px;
+}
+
+.home-contact-container p {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.home-contact form {
+	margin-top: 56px;
+}
+
+.home-contact-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-bottom: 16px;
+	text-align: left;
+}
+
+.home-contact-input label {
+	line-height: 24px;
+}
+
+.home-contact-input input, .home-contact-input textstore-area {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	outline: none;
+	border: 1px solid var(--black);
+}
+
+.home-contact-checkbox {
+	margin-bottom: 48px;
+}
+
+input[type=checkbox] {
+  accent-color: var(--red);
+}
+
+.home-contact button {
+	background-color: var(--red);
+	border: none;
+	color: var(--white);
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 176px;
+	padding-right: 176px;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+	@include mobile {
+		padding-right: 121px;
+		padding-left: 121px;
+	}
+}
+
+.home-contact {
+	background-color: var(--beige);
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.home-contact h2 {
+	text-align: center;
+}
