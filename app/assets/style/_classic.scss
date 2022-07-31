@@ -7,8 +7,8 @@
 	flex: 1;
 	padding-top: 24px;
 	padding-bottom: 24px;
-	border-right: 1px solid var(--light-gray);
-	border-left: 1px solid var(--light-gray);
+	border-right: 1px solid $light-gray;
+	border-left: 1px solid $light-gray;
 	font-size: 32px;
 	line-height: 48px;
 	font-weight: 500;
@@ -70,7 +70,7 @@
 }
 
 .classic-card-info p {
-	color: var(--red);
+	color: $red;
 	font-weight: 500;
 }
 
@@ -115,6 +115,6 @@
 }
 
 .classic-page-active {
-	background: var(--black);
-	color: var(--white);
+	background: $black;
+	color: $white;
 }

@@ -1,5 +1,5 @@
 .home-nav {
-	background-color: var(--red);
+	background-color: $red;
 	padding-top: 15.72px;
 	padding-bottom: 15.72px;
 }
@@ -50,7 +50,7 @@
 
 .home-nav li {
 	cursor: pointer;
-	color: var(--white);
+	color: $white;
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: 400;
@@ -63,7 +63,7 @@
 }
 
 footer {
-	background-color: var(--red);
+	background-color: $red;
 	padding-top: 60px;
 	padding-bottom: 32px;
 	color: white;
@@ -77,7 +77,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	border-bottom: 1px solid var(--white);
+	border-bottom: 1px solid $white;
 }
 
 .footer-info-nav {
@@ -99,7 +99,7 @@ footer {
 
 .footer-info-nav li {
 	cursor: pointer;
-	color: var(--white);
+	color: $white;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;

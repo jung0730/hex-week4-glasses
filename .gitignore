@@ -1,4 +1,6 @@
+public
 node_modules
-dist
 .publish
+dist
 .vscode
+.DS_Store
