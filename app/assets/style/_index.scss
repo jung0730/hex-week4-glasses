@@ -1,5 +1,44 @@
-input[type=checkbox] {
-  accent-color: $red;
+%layout-padding-margin-shared {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin-bottom: 80px;
+	text-align: center;
+	@include mobile {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+	}
+}
+
+%h2-shared {
+	color: $brown;
+	margin-bottom: 32px;
+}
+
+%ul-shared {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 24px;
+	@include tablet {
+		row-gap: 24px;
+	}
+}
+
+%li-flex-full-shared {
+	flex: 1;
+	@include tablet {
+		flex-basis: 100%;
+	}
+}
+
+%li-flex-half-shared {
+	flex: 1;
+	@include tablet {
+		flex-basis: calc((100% - 24px) / 2);
+	}
+	@include mobile {
+		flex-basis: 100%;
+	}
 }
 
 .home {
@@ -55,10 +94,25 @@ input[type=checkbox] {
 		&:not(:first-child) {
 			color: $red;
 		}
+		h2 {
+			&:first-child {
+				@extend %h2-shared;
+			}
+		}
+		ul {
+			@extend %ul-shared;
+		}
+		li {
+			@extend %li-flex-full-shared;
+		}
 	}
 	&-advantage {
+		@extend %layout-padding-margin-shared;
 		background-color: $beige;
-		h3 {
+		h2 {
+			@extend %h2-shared;
+		}
+		h3, h4 {
 			margin-bottom: 8px;
 		}
 		p {
@@ -71,14 +125,27 @@ input[type=checkbox] {
 			width: 84px;
 			margin-bottom: 24px;
 		}
+		ul {
+			@extend %ul-shared;
+		}
+		li {
+			@extend %li-flex-half-shared;
+		}
 	}
 	&-brand {
+		@extend %layout-padding-margin-shared;
 		background-image: url("../images/index-bg.png");
 		@include tablet {
 			background-image: url("../images/index-bg-md.png");
 		}
 		@include mobile {
 			background-image: url("../images/index-bg-sm.png");
+		}
+		ul {
+			@extend %ul-shared;
+		}
+		li {
+			@extend %li-flex-full-shared;
 		}
 		h2 {
 			&:first-child {
@@ -96,9 +163,17 @@ input[type=checkbox] {
 	&-recommendation {
 		padding-bottom: 80px;
 		h2 {
+			@extend %h2-shared;
 			text-align: center;
 		}
+		h5 {
+			margin-bottom: 8px;
+		}
+		ul {
+			@extend %ul-shared;
+		}
 		li {
+			@extend %li-flex-half-shared;
 			box-shadow: 0px 2px 6px #00000029;
 			border: 1px solid #DEE2E6;
 			border-radius: 4px;
@@ -136,10 +211,12 @@ input[type=checkbox] {
 			margin-top: 56px;
 		}
 		h2 {
+			@extend %h2-shared;
 			text-align: center;
 		}
 		label {
 			line-height: 24px;
+			margin-bottom: 8px;
 		}
 		button {
 			background-color: $red;
@@ -182,48 +259,9 @@ input[type=checkbox] {
 		}
 		&-checkbox {
 			margin-bottom: 48px;
+			input {
+				accent-color: $red;
+			}
 		}
 	}
-}
-
-.home-brand, .home-advantage {
-	padding-top: 80px;
-	padding-bottom: 80px;
-	margin-bottom: 80px;
-	text-align: center;
-	@include mobile {
-		padding-top: 40px;
-		padding-bottom: 40px;
-		margin-bottom: 40px;
-	}
-}
-.home-advantage h2, .home-classic h2:first-child, .home-recommendation h2, .home-contact h2 {
-	color: $brown;
-	margin-bottom: 32px;
-}
-.home-advantage ul, .home-classic ul, .home-brand ul, .home-recommendation ul {
-	display: flex;
-	flex-wrap: wrap;
-	column-gap: 24px;
-	@include tablet {
-		row-gap: 24px;
-	}
-}
-.home-advantage li, .home-recommendation li {
-	flex: 1;
-	@include tablet {
-		flex-basis: calc((100% - 24px) / 2);
-	}
-	@include mobile {
-		flex-basis: 100%;
-	}
-}
-.home-classic li, .home-brand li {
-	flex: 1;
-	@include tablet {
-		flex-basis: 100%;
-	}
-}
-.home-advantage h4, .home-recommendation h5, .home-contact-input label, .footer-info-contact {
-	margin-bottom: 8px;
 }
