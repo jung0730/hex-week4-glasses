@@ -162,7 +162,7 @@
   </div>
 </section>
 
-  <footer>
+  <footer class="footer">
     <div class="container">
       <div class="footer-info">
         <div>
@@ -203,6 +203,12 @@
   </footer>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
+  <script>
+    function toggleNav() {
+      const ul = document.querySelector('.home-nav ul');
+      ul.style.display = (ul.style.display) === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 
 </html>
