@@ -10,12 +10,12 @@
 </head>
 
 <body>
-  <nav class="home-nav">
-    <div class="container home-nav-container">
+  <nav class="nav">
+    <div class="container nav-container">
       <h1>
         <a href="#">眼鏡官網</a>
       </h1>
-      <a href="javascript:void(0);" class="home-nav-hamburger" onclick="toggleNav()">
+      <a href="javascript:void(0);" class="nav-hamburger" onclick="toggleNav()">
         <img src="./assets/images/menu.png">
       </a>
       <ul>
@@ -72,7 +72,7 @@
   <script src="./assets/js/all.js"></script>
   <script>
     function toggleNav() {
-      const ul = document.querySelector('.home-nav ul');
+      const ul = document.querySelector('.nav ul');
       ul.style.display = (ul.style.display) === 'block' ? 'none' : 'block';
     }
   </script>

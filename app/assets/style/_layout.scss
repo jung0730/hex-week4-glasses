@@ -1,60 +1,58 @@
-.home {
-	&-nav {
-		background-color: $red;
-		padding-top: 15.72px;
-		padding-bottom: 15.72px;
-		&-container {
-			display: flex;
-			justify-content: space-between;
-			align-content: center;
-			@include mobile {
-				flex-direction: column;
-				position: relative;
-			}
-		}
-		&-hamburger {
+.nav {
+	background-color: $red;
+	padding-top: 15.72px;
+	padding-bottom: 15.72px;
+	ul {
+		display: flex;
+		align-items: center;
+		column-gap: 64px;
+		@include mobile {
+			margin-top: 8px;
+			margin-right: 0;
+			flex-direction: column;
+			align-items: flex-start;
 			display: none;
-			@include mobile {
-				display: block;
-				position: absolute;
-				font-size: 35px;
-				right: 10px;
-				cursor: pointer;
-			}
 		}
-		ul {
-			display: flex;
-			align-items: center;
-			column-gap: 64px;
-			@include mobile {
-				margin-top: 8px;
-				margin-right: 0;
-				flex-direction: column;
-				align-items: flex-start;
-				display: none;
-			}
-			a {
-				display: block;
-				padding: 8px;
-				cursor: pointer;
-			}
-		}
-		li {
-			cursor: pointer;
-			color: $white;
-			font-size: 20px;
-			line-height: 30px;
-			font-weight: 400;
-		}
-		h1 a {
+		a {
 			display: block;
-			background-image: url("../images/logo-white.png");
-			width: 80px;
-			text-indent: 101%;
-			overflow: hidden;
-			white-space: nowrap;
-			height: 49px;
-			background-size: cover;
+			padding: 8px;
+			cursor: pointer;
+		}
+	}
+	li {
+		cursor: pointer;
+		color: $white;
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 400;
+	}
+	h1 a {
+		display: block;
+		background-image: url("../images/logo-white.png");
+		width: 80px;
+		text-indent: 101%;
+		overflow: hidden;
+		white-space: nowrap;
+		height: 49px;
+		background-size: cover;
+	}
+	&-container {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		@include mobile {
+			flex-direction: column;
+			position: relative;
+		}
+	}
+	&-hamburger {
+		display: none;
+		@include mobile {
+			display: block;
+			position: absolute;
+			font-size: 35px;
+			right: 10px;
+			cursor: pointer;
 		}
 	}
 }
