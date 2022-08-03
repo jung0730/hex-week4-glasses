@@ -4,8 +4,6 @@
 		text-align: center;
 		li {
 			flex: 1;
-			padding-top: 24px;
-			padding-bottom: 24px;
 			border-right: 1px solid $light-gray;
 			border-left: 1px solid $light-gray;
 			font-size: 32px;
@@ -18,17 +16,20 @@
 				line-height: 24px;
 			}
 		}
+		a {
+			display: block;
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
 		&-active {
 			border-bottom: 8px solid $red;
 		}
 	}
 	&-banner {
 		margin-bottom: 80px;
+		display: flex;
 		@include mobile {
 			margin-bottom: 40px;
-		}
-		ul {
-			display: flex;
 		}
 	}
 	&-combi {

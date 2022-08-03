@@ -147,6 +147,9 @@
 		li {
 			@extend %li-flex-full-shared;
 		}
+		img {
+			width: 100%;
+		}
 		h2 {
 			&:first-child {
 				margin-bottom: 32px;
