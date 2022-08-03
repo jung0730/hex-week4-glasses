@@ -53,7 +53,6 @@ a {
   color: inherit; }
 
 img {
-  width: 100%;
   max-width: 100%;
   height: auto;
   vertical-align: bottom; }
@@ -336,6 +335,8 @@ h3 {
   @media (max-width: 576px) {
     .home-brand {
       background-image: url("../images/index-bg-sm.png"); } }
+  .home-brand img {
+    width: 100%; }
   .home-brand h2:first-child {
     margin-bottom: 32px;
     color: #ffffff; }
@@ -429,8 +430,6 @@ h3 {
   text-align: center; }
   .classic-nav li {
     flex: 1;
-    padding-top: 24px;
-    padding-bottom: 24px;
     border-right: 1px solid #DCDCDC;
     border-left: 1px solid #DCDCDC;
     font-size: 32px;
@@ -442,16 +441,19 @@ h3 {
         padding-bottom: 16px;
         font-size: 16px;
         line-height: 24px; } }
+  .classic-nav a {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px; }
   .classic-nav-active {
     border-bottom: 8px solid #AA0601; }
 
 .classic-banner {
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  display: flex; }
   @media (max-width: 576px) {
     .classic-banner {
       margin-bottom: 40px; } }
-  .classic-banner ul {
-    display: flex; }
 
 .classic-combi {
   margin-bottom: 80px;
@@ -638,8 +640,16 @@ h3 {
     @media (max-width: 768px) {
       .store-location-map {
         flex-basis: 100%; } }
+    .store-location-map img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
   @media (max-width: 768px) {
     .store-location-img {
       flex-basis: calc((100% - 24px) / 2); } }
+  .store-location-img img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 /*# sourceMappingURL=all.css.map */
