@@ -87,6 +87,9 @@ h3 {
       font-size: 24px;
       line-height: 36px; } }
 
+body {
+  overflow-x: hidden; }
+
 .nav {
   background-color: #AA0601;
   padding-top: 15.72px;
